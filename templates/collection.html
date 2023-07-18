@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="products">
+
+    <div class="container2">
+      <h2>Featured Products</h2>
+      <div class="boxes1">
+        {% for i in fec  %}
+        <div class="box1">
+          <img src="{{i.image.url}}" alt="">
+          <h3>{{i.title}}</h3>
+          <span class="sp">${{i.Price}}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="products">
+    <div class="container2">
+      <h2>In sale products</h2>
+      <div class="boxes2">
+        {% for i in cec  %}
+        <div class="box2">
+          <img src="{{i.image.url}}" alt="">
+          <h3>{{i.title}}</h3>
+          <span class="sp">${{i.Price}}</span>
+          <p>${{i.disPrice}}</p>
+        </div>
+        {% endfor %}
+      </div>
+</div>
+
+</div>
+  
+{% endblock body %}

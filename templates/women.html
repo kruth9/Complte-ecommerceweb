@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="con-b">
+        {% for i in wec %}
+            <div class="con-c">
+                <img src="{{i.image.url}}" alt="shoes" class="sec-img">
+                    
+                <h3 class="head">{{i.title}}</h3>
+                <p class="body">{{i.content}}</p>
+                <label class="lprice">Price:</label>
+                <h3 class="hprice">{{i.Price}}</h3>
+                <button type="button" class="sec-btn">View Details</button>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock body %}

@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+        <section class="second-container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-1" src="{% static 'images/shoes1.jpg' %}" alt="yellow shoes">
+                    <img id="slide-2" src="{% static 'images/shoes2.jpg' %}" alt="nice shoes">
+                    <img id="slide-3" src="{% static 'images/shoes3.jpg' %}" alt="red shoes">
+                    <img id="slide-4" src="{% static 'images/shoes4.jpg' %}" alt="white shoes">
+                    <img id="slide-1" src="{% static 'images/shoes1.jpg' %}" alt="yellow shoes">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                    <a href="#slide-4"></a>
+                </div>
+            </div>
+        </section>
+
+    <!--ITEMS-->
+  
+    <section id="items" class="items">
+        
+        <h1>TOP Selling</h1>
+        <p>shoes that have highest sellings and rcommended by the authors</p>
+        
+        
+        <div class="row">
+            {% for i in data %}
+            <div id="open" class="column">
+                <img src="{{ i.image.url }}" alt="shoes" class="items-picture">
+                <h3>{{ i.title }}</h3>
+                <h3>{{ i.Price }}</h3>
+                <button type="button" class="btn" onclick="openpopup()">View Details</button>
+                
+            </div>
+            <div class="popup" id="popup">
+                <img src="{{i.image.url}}" alt="shoes" class="img">
+                <div class="item-details">
+                    <h3 class="title">{{i.title}}</h3>
+                    <p class="details">{{i.content}}</p>
+                  <label class="ll">Price:</label>
+                  <h2 class="price">{{i.Price}}</h2>
+                  <label class="lll">Qty:</label>
+                  <input type="number" value="{{i.Oty}}" class="oty">
+                  <label class="llll">Sizes:</label>
+                  <input type="number" value="{{i.size}}" class="size">
+                  <button type="submit" class="add">Add To Cart</button>
+                  <img src="{% static 'images/cross.png' %}" onclick="closepopup()" class="ok-btn">
+                </div>
+            </div>   
+            {% endfor %}
+    
+        
+    </section>
+    
+   
+    
+    
+    <!---facilities-->
+    <section class="facilities">
+        <h1>Our Services</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+        <div class="row">
+            <div class="services">
+                <img src="{% static 'images/services.jpg'%}">
+                <h3> WORLD CLASS LIBARY OF FASHION</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Obcaecati autem cupiditate ullam hic eius,</p>
+            </div>
+            <div class="services">
+                <img src="{% static 'images/services1.jpg'%}">
+                <h3> FAST DELEVERY AND CUSTOMER SERVICES</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Obcaecati autem cupiditate ullam hic eius,</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer--->
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Laborum officia necessitatibus aliquam facilis nam aliquid,<br>
+             architecto dicta repudiandae praesentium ullam, dolorum aut ex sed.
+             Quos dolore nam accusantium nesciunt deleniti.</p>
+        
+        <div class="foot-icons">
+            <img src="{% static 'images/facebook.png' %}" class="foot">
+            <img src="{% static 'images/twitter.png' %}" class="foot">
+            <img src="{% static 'images/github.png' %}" class="foot">
+            <img src="{% static 'images/gmail.png' %}" class="foot">
+            
+        </div>
+        <p>made by group of juniors devlopers</p>
+    </section> -->
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openpopup() {
+            popup.classList.add("open-popup");
+           
+        }
+
+        function closepopup() {
+            popup.classList.remove("open-popup");
+        }
+
+    </script>
+    
+{% endblock body %}

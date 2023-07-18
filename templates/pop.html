@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+  .btn{
+    padding: 10px 60px;
+    background: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+.popup{
+    width: 400px;
+    background: whitesmoke;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 10;
+  }
+  .open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+
+  }
+  .popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+
+  }
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+    </style>
+</head>
+<body>
+    <section id="items" class="items">
+        <h1>shoes</h1>
+        <p>
+           Lorem ipsum dolor sit amet consectetur ad</p>
+        </p>
+        <div class="row">
+           <div id="open" class="column">
+               <img src="{{i.image.url}}" alt="shoes" class="items-picture">
+               <h3>{{i.title}}</h3>
+               <p>{{i.content}}</p>
+               <h3>{{i.Price}}</h3>
+               <button type="button" class="btn" onclick="openpopup()">View Details</button>
+           </div>  
+           
+   </section>
+   <div class='popup' id="popup">
+       <h2>it works</h2>
+       <button type='button' onclick="closepopup()">ok</button>
+   </div>
+
+
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openpopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closepopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+    
+</body>
+</html>

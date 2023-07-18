@@ -1,0 +1,186 @@
+body {
+	font-family: Arial;
+	background-color:whitesmoke;
+}
+
+.container2 {
+	width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: #FFF;
+    border: solid black 2px;
+}
+
+.products {
+	margin-top: 80px;
+}
+
+.products h2 {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    left: -30px;
+	font-weight: normal;
+    color: #FFF;
+	background-color: #326a79;
+}
+
+.products .boxes2 {
+	display: flex;
+}
+
+.products .box2 {
+	width: 23%;
+	height: 315px;
+    padding: 2px;
+	margin-right: 2%;
+    margin-top: 10px;
+    border: 5px solid #DDD;
+}
+
+.products .box2:last-child {
+	margin-right: 0;
+}
+
+.products .box2 img {
+	width: 100%;
+}
+
+.products .box2 h3 {
+	color: #5a5a5a;
+	text-align: center;
+	font-weight: normal;
+}
+
+.products .box2 .sp {
+	display: block;
+	position: relative;
+	color: #326a79;
+	font-weight: bold;
+	text-align: center;
+}
+
+.products .box2 span:before {
+	position: absolute;
+    content: "";
+    top: 9px;
+    left: 10px;
+    width: 65px;
+    border-top: 2px solid #BBB;
+}
+
+.products .box2 span:after {
+	position: absolute;
+    content: "";
+    top: 9px;
+    right: 10px;
+    width: 65px;
+    border-top: 2px solid #BBB;
+}
+
+.products .box2 {
+	position: relative;
+}
+
+.products .box2:before {
+	content: "Sale!";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    line-height: 3;
+    top: -20px;
+    left: -20px;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #FF5722;
+}
+
+.products .box2 span {
+	color: #888;
+	left: -25px;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.products .box2 p {
+	position: relative;
+	margin-bottom: 15px;
+    margin-top: 14px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	top: -32px;
+    left: 25px;
+	color: #FE4D1A;
+}
+
+.products .box2 span:before {
+	width: 40px;
+	left: 40px
+}
+
+.products .box2 span:after {
+	width: 40px;
+	right: -22px
+}
+
+.products .boxes1 {
+	display: flex;
+}
+
+.products .box1 {
+	width: 23%;
+	height: 315px;
+    padding: 2px;
+	margin-right: 2%;
+    margin-top: 10px;
+    border: 5px solid #DDD;
+}
+
+.products .box1:last-child {
+	margin-right: 0;
+}
+
+.products .box1 img {
+	width: 100%;
+}
+
+.products .box1 h3 {
+	color: #5a5a5a;
+	text-align: center;
+	font-weight: normal;
+}
+
+.products .box1 .sp {
+	display: block;
+	position: relative;
+	color: #326a79;
+	font-weight: bold;
+	text-align: center;
+}
+
+.products .box1 span:before {
+	position: absolute;
+    content: "";
+    top: 9px;
+    left: 10px;
+    width: 65px;
+    border-top: 2px solid #BBB;
+}
+
+.products .box1 span:after {
+	position: absolute;
+    content: "";
+    top: 9px;
+    right: 10px;
+    width: 65px;
+    border-top: 2px solid #BBB;
+}
+
+.products .box1 {
+	position: relative;
+}
+
